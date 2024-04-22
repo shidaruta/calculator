@@ -90,22 +90,17 @@ buttons.forEach(btn => {
        } else if (btn.classList.contains('equalTo')) {
          if (displayValue === '') {
              displayBox.value = '0';
-             console.log("1st");
          } else if (operator !== '' && firstNo !== null) {
              secondNo = displayValue;
-             console.log("2nd First: " + firstNo);
-             console.log("2nd Second: " + secondNo);
              displayValue = operate(operator, firstNo, secondNo);
              updateDisplay();
              firstNo = displayValue;
              secondNo = null;
              operator = '';
              equalPressed = true;
-             console.log("2nd");
          } else {
              updateDisplay();
              equalPressed = true;
-             console.log("3rd");
          }
      }     
    });
